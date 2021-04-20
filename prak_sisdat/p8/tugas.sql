@@ -56,13 +56,9 @@ insert into ambil values
 select nama, nilai
 from mahasiswa, ambil
 where mahasiswa.npm = ambil.npm
-and mahasiswa.npm in (
-    select npm from ambil
-    where nilai = (
-        select max(nilai) from ambil
-        where kode = 'A01'
-    )
-    and kode = 'A01'
+and nilai = (
+    select max(nilai) from ambil
+    where kode = 'A01'
 )
 and kode = 'A01'; #alvaro-41
 
