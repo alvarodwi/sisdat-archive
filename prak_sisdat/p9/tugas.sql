@@ -91,9 +91,9 @@ where npm in (
 -- Mahasiswa berdasarkan npm yang diurutkan berdasarkan nilai.
 select *
 from mahasiswa inner join nilai using (npm)
-order by npm; #alvaro-41
+order by (uas+uts)/2; #alvaro-41
 
--- soal 6
+-- soal 7
 -- Gunakan perintah OUTER JOIN untuk menggabungkan tabel Nilai dan tabel
 -- Mahasiswa berdasarkan npm yang diurutkan berdasarkan nilai.
 select *
